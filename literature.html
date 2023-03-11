@@ -10,8 +10,15 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- connect to a Google font -->  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+
   <!-- connect to a Font Aweseom font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- connect to a favicon -->
+  <link rel="icon" href="images/favicon1.png">
 
   <title>Women's Web - Literature</title>
 </head>
@@ -22,7 +29,7 @@
     <nav>
         <ul>
           <li><a href="index.html">About</a></li>
-          <li class="active"><a href="literature.html">Literature</a></li>
+          <li class="active"><a class="active" href="literature.html">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
           <li><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
@@ -33,11 +40,15 @@
             Key Concepts In Post-Colonial Studies - Ashcroft, Bill, Gareth Griffiths, and Helen Tiffin,
             or myself -->
       <!-- interpretation of equity from https://everydayfeminism.com/2014/09/equality-is-not-enough/ -->
+    <div class="maintitle">
+      <h1>Feminist Literature</h1>
+    </div>
 
-    <h1>Feminist Literature</h1>
   </header>
 
   <main id = mainstuff>
+
+    <div class="grid">
 
       <div>
       <h2>bell hooks</h2>
@@ -349,12 +360,30 @@
           <li>The Murder of Roger Ackroyd</li>
         </ul>
       </div>
+
+      </div>
     </main>
+
+
     <footer>
-      <p class="thanks">
-        Thanks for visiting! <i class="far fa-grin"> </i>
-      </p>
+      <div class="footerpart">
+        <p>
+        Thanks for visiting!
+        </p>
       <p>Orginal content created by Kelsey Toporski 2019</p>
+      <div class="icons">
+        <i class="fa fa-envelope"></i>
+        <i class="fa fa-commenting"></i>
+        <i class='fa fa-globe'></i>
+        <i class="fa fa-phone-square"></i>
+      </div>
+      </div>
+
+      <form class="subscribe-form" action="#" method="post">
+        <input type="email" id="email" name="email" placeholder="Enter your email address:" required>
+        <button type="submit">Subscribe</button>
+      </form>
+
       <a href="#top" class="tops">Back to Top</a>
 
     </footer>
