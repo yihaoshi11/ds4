@@ -102,7 +102,7 @@ header p{
 }
 
 .grid div:nth-child(3n+2)  {
-     box-shadow: 10px 0 5px #9ec1ab, -10px 0 5px #9ec1ab;
+    box-shadow: 10px 0 5px #9ec1ab, -10px 0 5px #9ec1ab;
 }
 
 .indexgrid{
@@ -120,6 +120,18 @@ header p{
     border-radius: 15px;
     padding: 20px 20px;
     background-color: #f5f5f5;
+}
+
+.indexgrid div:nth-child(3n+1)  {
+    box-shadow: 10px 0 5px white;
+    }
+
+.indexgrid div:nth-child(3n)  {
+    box-shadow: -10px 0 5px white;
+}
+
+.indexgrid div:nth-child(3n+2)  {
+    box-shadow: 10px 0 5px white, -10px 0 5px white;
 }
 
 nav{
@@ -161,6 +173,12 @@ img#mainimg{
     width: 90%;
 }
 
+.mainimg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img{
     width: 35%;
     padding: 3px;
@@ -177,7 +195,7 @@ img:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    box-shadow: 0 0 0 4px #659162;
+    box-shadow: 0 0 0 4px #659162 inset;
     transition: 1s ease;
     }
 
@@ -191,9 +209,9 @@ img:hover{
 }
 
 .skip{
-    position: absolute;
-    left: -400px;
-    top: -200;
+    display: inline;
+    opacity: 1;
+    position: static;
 }
 
 /* h1{
@@ -255,7 +273,7 @@ footer a{
 
 input, button {
     margin: 10px;
-    font-size: 1.2rem;
+    font-size: 19px;
 }
 
 input[type="email"]{
@@ -280,6 +298,35 @@ button:hover{
     background-color: #0062cc;
 }
 
+body.dark-mode{
+    background-color: #333333;
+    color: #eeeeee;
+}
+
+body.dark-mode header,
+body.dark-mode footer{
+    background-color: #222222;
+}
+
+body.dark-mode header .maintitle{
+    background-color: #444444;
+    color: #1ba0a0;
+}
+
+body.dark-mode .indexgrid div{
+    background-color: #555555;
+    color: #eeeeee;
+}
+
+body.dark-mode .grid div{
+    background-color: #555555;
+    color: #eeeeee;
+}
+
+body.dark-mode nav{
+    background-color: #1b1b1b;
+}
+
 @media screen and (max-width: 480px) {
     header .maintitle{
         width: 90%;
@@ -295,16 +342,87 @@ button:hover{
         flex-direction: column;
     }
 
+    .indexgrid div{
+        box-shadow: 10px 0 5px white, -10px 0 5px white !important;
+    }
+
     .grid{
         display: flex;
         flex-direction: column;
     }
 
-    /* .grid div{
-        box-shadow: 10px 0 5px #9ec1ab, -10px 0 5px #9ec1ab;
-   } */
+    .grid div{
+        box-shadow: 10px 0 5px #9ec1ab, -10px 0 5px #9ec1ab !important;
+    }
 
-   footer, input, button{
-    font-size: 12pt;
-   }
+    footer, input, button{
+        font-size: 12pt;
+    }
+
+    .intro{
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .grid{
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    .indexgrid{
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    .grid div:nth-child(2n+1){
+        box-shadow: 10px 0 5px #9ec1ab;
+    }
+
+    .grid div:nth-child(2n){
+        box-shadow: -10px 0 5px #9ec1ab;
+    }
+
+    .indexgrid div:nth-child(2n+1){
+        box-shadow: 10px 0 5px white;
+    }
+
+    .indexgrid div:nth-child(2n){
+        box-shadow: -10px 0 5px white;
+    }
+
+    header .maintitle{
+        font-size: 30pt;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    nav ul li{
+        font-size: 16px;
+    }
+
+    input, button{
+        font-size: 16px;
+    }
+
+    .grid div:hover, .indexgrid div:hover{
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgb(131, 131, 131);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .intro{
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .skip {
+        opacity: 0;
+        position: absolute;
+    }
 }
